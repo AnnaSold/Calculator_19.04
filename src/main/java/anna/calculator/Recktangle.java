@@ -11,6 +11,11 @@ public class Recktangle {
     }
 
     public static double calculateAreaRecktangle(double a, double b) {
+        if ((a < 0) || (b < 0)) try {
+            throw new NullExeption("Вы не ввели значение");
+        } catch (NullExeption e) {
+            throw new RuntimeException(e);
+        }
         double area = 0;
         area = a * b;
         return area;
