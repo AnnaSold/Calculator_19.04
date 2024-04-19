@@ -28,7 +28,7 @@ public class HelloController {
         label1.setText("+");
     }
 
-    public void calculateAreaRecktangle() throws NullExeption {
+    public void calculateAreaRecktangle() {
         double result = 0;
 
         try {
@@ -36,7 +36,7 @@ public class HelloController {
             double num2 = Double.parseDouble(field2.getText());
             result = Recktangle.calculateAreaRecktangle(num1, num2);
             label1.setText(String.valueOf(result));
-        } catch (NullPointerException e) {
+        } catch (NullPointerException | NullExeption e) {
             String s = e.getMessage();
             label1.setText(s);
         }
