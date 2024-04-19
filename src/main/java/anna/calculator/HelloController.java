@@ -34,7 +34,6 @@ public class HelloController {
         try {
             double num1 = Double.parseDouble(field1.getText());
             double num2 = Double.parseDouble(field2.getText());
-
             result = Recktangle.calculateAreaRecktangle(num1, num2);
             label1.setText(String.valueOf(result));
         } catch (NullPointerException e) {
